@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Hackathon2018._1.NuPogodiScripts;
+﻿using Hackathon2018._1.NuPogodiScripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +9,15 @@ public class FoodCollisionHandler : MonoBehaviour
 	public StateEnum State;
 	public bool MissZone;
 
+	private Animator animator;
+
 	private static int gameScore = 150;
 	private Text textScore;
 	
 	void Start () {
 		cow = GameObject.Find("Cow");
 		textScore = GameObject.Find("TextScoreNuPogodi").GetComponent<Text>();
+		animator = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -45,12 +45,12 @@ public class FoodCollisionHandler : MonoBehaviour
 
 		if (foodInfo.IsPoisoned)
 		{
-			cow.GetComponent<Animator>().SetInteger("State", 5);
+			animator.SetInteger("State", 5);
 			MinigameController.instance.GameOver();
 		}
 		else
 		{
-			cow.GetComponent<Animator>().SetInteger("State", 4);
+			animator.SetInteger("State", 4);
 			Destroy(collider.gameObject);
 			gameScore += 100;
 		}
