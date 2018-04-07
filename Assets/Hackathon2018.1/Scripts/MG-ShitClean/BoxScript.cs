@@ -8,8 +8,6 @@ public class BoxScript : MonoBehaviour {
     protected List<GameObject> pieces = new List<GameObject>();
     private GameObject LeftUpPoint;
     private GameObject RightDownPoint;
-    private Text TimeText;
-    private Text ShitCount;
 
     private float time = 30;
     private int CountToWin = 12;
@@ -24,8 +22,6 @@ public class BoxScript : MonoBehaviour {
     {
         LeftUpPoint = GameObject.Find("LeftUpPoint");
         RightDownPoint = GameObject.Find("RightDownPoint");
-        TimeText = GameObject.Find("TimeCount").GetComponent<Text>();
-        ShitCount = GameObject.Find("ShitCount").GetComponent<Text>();
         GeneratePoops();
         pieces.AddRange(GameObject.FindGameObjectsWithTag("ShitPiece"));
 
@@ -63,9 +59,6 @@ public class BoxScript : MonoBehaviour {
         }
 
         time -= Time.deltaTime;
-
-        TimeText.text = time.ToString().Split('.').FirstOrDefault();
-        ShitCount.text = (Count - CountToWin).ToString();
     }
 
     private void OnTriggerStay2D(Collider2D e)

@@ -39,6 +39,7 @@ public class SkeletonCow : MonoBehaviour {
     {
         if (closetWithSeleton.skeletonIsShowed && !hiden)
         {
+            animator.SetTrigger("Dead");
             GameOver();
         }
     }

@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 66c2845e5920807408e33e6dfee46ceb
-timeCreated: 1523139628
+guid: bd766c658ef9b714db5673395995f26c
+timeCreated: 1523141110
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: _icon wasd-Sheet_0
-    21300002: _icon wasd-Sheet_1
+    21300000: icon_ad-Sheet_0
+    21300002: icon_ad-Sheet_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -36,7 +36,7 @@ TextureImporter:
     aniso: -1
     mipBias: -1
     wrapU: 1
-    wrapV: 1
+    wrapV: -1
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
@@ -101,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _icon wasd-Sheet_0
+      name: icon_ad-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 38
+        width: 48
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,13 +115,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: _icon wasd-Sheet_1
+      name: icon_ad-Sheet_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 48
         y: 0
-        width: 70
-        height: 38
+        width: 48
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

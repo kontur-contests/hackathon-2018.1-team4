@@ -7,23 +7,74 @@ public class MinigameController : MonoBehaviour {
 
     public static MinigameController instance;
 
+    public MinigameUi minigameUi;
+
+    private bool ended = false; 
+
     private const string globeSceneName = "Main";
+
+    private float endGameTime = 3f;
+
+    public bool gamesStarted = false;
 
 	void Awake ()
     {
         instance = this;
+
+        if (minigameUi == null)
+            minigameUi = FindObjectOfType<MinigameUi>();
+
+        Debug.Assert(minigameUi != null);
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 0f;
+
+        minigameUi.ShowTutorImage();
+    }
+
+    public void StartGame()
+    {
+        gamesStarted = true;
+        Time.timeScale = 1f;
     }
 
     public void GameOver()
     {
-        SceneManager.LoadScene(globeSceneName);
+        if (ended)
+            return;
+
+        ended = true;
+
+        minigameUi.ShowLose();
+
+        Invoke("GoToGlobe", endGameTime);
         Debug.Log("Game Over");
     }
 
     public void GameComplete()
     {
-        SceneManager.LoadScene(globeSceneName);
+        if (ended)
+            return;
+
+        ended = true;
+
+        minigameUi.ShowWin();
+        Invoke("GoToGlobe", endGameTime);
+
         Debug.Log("Game Complete");
+    }
+
+    public void GoToGlobe()
+    {
+        minigameUi.Fade(true);
+        Invoke("LoadGlobeDelayed", 1f);
+    }
+
+    public void LoadGlobeDelayed()
+    {
+        SceneManager.LoadScene(globeSceneName);
     }
 
 }
