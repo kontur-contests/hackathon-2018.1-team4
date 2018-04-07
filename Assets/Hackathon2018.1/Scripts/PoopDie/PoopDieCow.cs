@@ -70,6 +70,8 @@ public class PoopDieCow : MonoBehaviour {
 
     public void OnMouseDown()
     {
+        RifleController.instance.Shot();
+
         if(state == PoopDieCowState.Fat)
         {
             //TODO:Show Animation

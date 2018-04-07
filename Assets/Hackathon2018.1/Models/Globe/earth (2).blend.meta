@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: e1208e5b1105afb45832a6ad4c54ec9e
+timeCreated: 1523112604
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Controller
+    100002: Controller_001
+    100004: //RootNode
+    100006: FarmBuild
+    100008: Green1
+    100010: Green2
+    100012: Green3
+    100014: Green4
+    100016: Hay1
+    100018: Hay2
+    100020: Hay3
+    100022: Rifle
+    100024: Rifle_Arm
+    100026: Root
+    100028: SHITTY_EARTH
+    100030: SpinMe_Baybeeeeh
+    100032: Truck
+    100034: wall1
+    100036: wall2
+    100038: Warp
+    100040: WarpSpin
+    400000: Controller
+    400002: Controller_001
+    400004: //RootNode
+    400006: FarmBuild
+    400008: Green1
+    400010: Green2
+    400012: Green3
+    400014: Green4
+    400016: Hay1
+    400018: Hay2
+    400020: Hay3
+    400022: Rifle
+    400024: Rifle_Arm
+    400026: Root
+    400028: SHITTY_EARTH
+    400030: SpinMe_Baybeeeeh
+    400032: Truck
+    400034: wall1
+    400036: wall2
+    400038: Warp
+    400040: WarpSpin
+    2100000: Material
+    2300000: FarmBuild
+    2300002: Green1
+    2300004: Green2
+    2300006: Green3
+    2300008: Green4
+    2300010: Hay1
+    2300012: Hay2
+    2300014: Hay3
+    2300016: SHITTY_EARTH
+    2300018: Truck
+    2300020: wall1
+    2300022: wall2
+    3300000: FarmBuild
+    3300002: Green1
+    3300004: Green2
+    3300006: Green3
+    3300008: Green4
+    3300010: Hay1
+    3300012: Hay2
+    3300014: Hay3
+    3300016: SHITTY_EARTH
+    3300018: Truck
+    3300020: wall1
+    3300022: wall2
+    4300000: Rifle
+    4300002: Green4
+    4300004: Green3
+    4300006: Green2
+    4300008: Green1
+    4300010: Hay3
+    4300012: Hay2
+    4300014: Hay1
+    4300016: wall2
+    4300018: wall1
+    4300020: FarmBuild
+    4300022: Truck
+    4300024: WarpSpin
+    4300026: SHITTY_EARTH
+    7400000: Default Take
+    7400002: Shoot
+    9500000: //RootNode
+    13700000: Rifle
+    13700002: WarpSpin
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
