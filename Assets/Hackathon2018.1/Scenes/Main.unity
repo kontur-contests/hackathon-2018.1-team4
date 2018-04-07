@@ -140,7 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3ace1a68ac23d4db0647126e8aaefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miniGames: []
+  miniGames:
+  - {fileID: 11400000, guid: 7f0fdbf8764715c42bb44ddfe049c383, type: 2}
   activitiesContaier: {fileID: 1074197902}
   maxActivePoints: 2
   maxActiveTime: 10

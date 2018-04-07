@@ -9,7 +9,7 @@ public class MinigameController : MonoBehaviour {
 
     private const string globeSceneName = "Main";
 
-	void Awale ()
+	void Awake ()
     {
         instance = this;
     }
@@ -17,11 +17,13 @@ public class MinigameController : MonoBehaviour {
     public void GameOver()
     {
         SceneManager.LoadScene(globeSceneName);
+        Debug.Log("Game Over");
     }
 
     public void GameComplete()
     {
         SceneManager.LoadScene(globeSceneName);
+        Debug.Log("Game Complete");
     }
 
 }

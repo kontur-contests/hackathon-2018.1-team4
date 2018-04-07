@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hackathon2018.1/Scenes/Main.unity
     guid: aefee6e532c36834da2d4d71a2c880f8
+  - enabled: 1
+    path: Assets/Hackathon2018.1/Scenes/PoopDie.unity
+    guid: 8a9187176ed459c44aa73d6106f16fb3
