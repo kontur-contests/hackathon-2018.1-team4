@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine.UI;
 
 public class BoxScript : MonoBehaviour {
-
+    private Random rand = new Random();
     protected List<GameObject> pieces = new List<GameObject>();
     private GameObject LeftUpPoint;
     private GameObject RightDownPoint;
@@ -15,14 +15,39 @@ public class BoxScript : MonoBehaviour {
     private int CountToWin = 5;
     private int Count = 100;
 
+    private int PoopsCountMin = 30;
+    private int PoopsCountMax = 50;
+    
+    public GameObject[] Shits;
+
     public void Start()
     {
         LeftUpPoint = GameObject.Find("LeftUpPoint");
         RightDownPoint = GameObject.Find("RightDownPoint");
         TimeText = GameObject.Find("TimeCount").GetComponent<Text>();
         ShitCount = GameObject.Find("ShitCount").GetComponent<Text>();
-
+        GeneratePoops();
         pieces.AddRange(GameObject.FindGameObjectsWithTag("ShitPiece"));
+
+    }
+
+    private void GeneratePoops()
+    {
+        var leftX = LeftUpPoint.transform.position.x;
+        var rightX = RightDownPoint.transform.position.x;
+        var upY = LeftUpPoint.transform.position.y;
+        var downY = RightDownPoint.transform.position.y;
+
+        var poopsCount = Random.Range(PoopsCountMin, PoopsCountMax);
+        for(var i = 0; i < poopsCount; i++)
+        {
+            var nextCoords = new Vector2(Random.Range(leftX, rightX), Random.Range(downY, upY));
+            var rotation = Random.rotation;
+            rotation.x = 0;
+            rotation.y = 0;
+
+            Instantiate(Shits[Random.Range(1, 4)], nextCoords, rotation);
+        }
     }
 
     public void Update()

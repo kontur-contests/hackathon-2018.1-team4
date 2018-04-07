@@ -16,6 +16,10 @@ public class ShovelScript : MonoBehaviour {
         shovel = GameObject.Find("Shovel");
         joint = shovel.GetComponent<HingeJoint2D>();
         rigidbody = shovel.GetComponent<Rigidbody2D>();
+
+        var leftWall = GameObject.Find("LeftWall").GetComponent<Renderer>().enabled = false;
+        var rightWall = GameObject.Find("RightWall").GetComponent<Renderer>().enabled = false;
+        var ground = GameObject.Find("Ground").GetComponent<Renderer>().enabled = false;
     }
 
     // Update is called once per frame
