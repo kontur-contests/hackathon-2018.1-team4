@@ -15,7 +15,7 @@ public class BoxScript : MonoBehaviour {
     private int CountToWin = 12;
     private int Count = 100;
 
-    private int PoopsCountMax = 50;
+    private int PoopsCountMin = 70;
     private int PoopsCountMax = 100;
     
     public GameObject[] Shits;
