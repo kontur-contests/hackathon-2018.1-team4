@@ -46,7 +46,6 @@ public class PoopDieCow : MonoBehaviour {
             transform.localPosition += (bushPos.localPosition - transform.localPosition).normalized * moveSpeed * Time.deltaTime;
         else
             EatBush();
-
     }
 
     public void EatBush()
