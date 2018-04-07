@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Cow5
+  m_Controller: {fileID: 9100000, guid: 467e532ddb592b14b95b85459bbc69fe, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f31a5c8cbb61d954ca18ccc1b681e1bb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 746c394655ac2e84a8125bb6db3363da, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fe65bec3416d2154e912abb947e63867, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 78acd54d5c682644f9217a029db7f9ab, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4b6503e0951a29a448a77aece9665c10, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a9f7e0ebfee16bd4b9b15ce47e75c7b5, type: 2}

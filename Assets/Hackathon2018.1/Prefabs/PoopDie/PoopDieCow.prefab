@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4736058639856294}
   - component: {fileID: 212646854975445636}
   - component: {fileID: 114334676394070954}
+  - component: {fileID: 61406714296607592}
+  - component: {fileID: 95019005643299600}
   m_Layer: 0
   m_Name: PoopDieCow
   m_TagString: Untagged
@@ -34,13 +36,55 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428431247775550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.38, y: 1.77, z: 13.410156}
-  m_LocalScale: {x: 6.341399, y: 6.341399, z: 6.341399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.2177544, y: -1.34, z: -0.12360096}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61406714296607592
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428431247775550}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.11}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.37, y: 0.25}
+    newSize: {x: 0.36, y: 0.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36, y: 0.26}
+  m_EdgeRadius: 0
+--- !u!95 &95019005643299600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1428431247775550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 7a6c0a7d372301f45b778837939f100d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114334676394070954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +96,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0a07a4903ecd04badacd468afa1aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  animator: {fileID: 0}
+  animators:
+  - {fileID: 9100000, guid: 467e532ddb592b14b95b85459bbc69fe, type: 2}
+  - {fileID: 22100000, guid: 7a6c0a7d372301f45b778837939f100d, type: 2}
+  - {fileID: 22100000, guid: ad7c2c873db34c546b5ba0b612b22247, type: 2}
+  - {fileID: 22100000, guid: b2b66ba802fb8e64ba4b2bd9ebc6e955, type: 2}
+  - {fileID: 22100000, guid: 6a2951b8a1b83c64d96f55e44a4a4b4a, type: 2}
+  poopManager: {fileID: 0}
+  moveMinSpeed: 4
+  moveMaxSpeed: 10
   maxPos: {fileID: 0}
   minPos: {fileID: 0}
   bushPos: {fileID: 0}
@@ -65,7 +118,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -81,16 +133,15 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1490187981
+  m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300004, guid: 3e8e7669fb57fe649a1944c5bb25362c, type: 3}
+  m_Sprite: {fileID: 21300002, guid: c7f463cb5239dd644bd30c7d83b62780, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
