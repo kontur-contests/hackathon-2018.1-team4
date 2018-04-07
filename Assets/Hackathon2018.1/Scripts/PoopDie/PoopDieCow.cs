@@ -68,11 +68,6 @@ public class PoopDieCow : MonoBehaviour {
         }
     }
 
-    public void SetTargetBush()
-    {
-
-    }
-
     public void OnMouseDown()
     {
         if(state == PoopDieCowState.Fat)
