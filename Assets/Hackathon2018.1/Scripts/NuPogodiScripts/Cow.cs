@@ -5,63 +5,38 @@ using UnityEngine;
 
 public class Cow : MonoBehaviour
 {
-	public Height Height = Height.Mid;
+	public StateEnum StateEnum = StateEnum.Mid;
+	
 	public Horisontal Horisontal = Horisontal.Right;
-	public Vector3 currentPosition = new Vector3(2, 1);
-	private Eat currentEat;
-	public GameObject EatKaktus;
-	public GameObject EatBall;
-	public GameObject EatBoot;
-	public GameObject EatPokemon;
-	public GameObject EatCarrot;
-	public GameObject EatCabbage;
-	public GameObject EatFlower;
-	public GameObject EatOats;
-	public GameObject EatPumpkin;
-	public GameObject EatCannabis;
+	public Vector3 CurrentPosition = new Vector3(2, 1);
 
+	private Animator animator;
+	
+	//todo temp
+	private int temp = 0;
+	
 	void Start ()
 	{
-		StartCoroutine(Food());
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		ChangePosition();
-		
+//		if (Input.GetKeyDown(KeyCode.Space))
+//		{
+//			animator.SetInteger("State", 1);
+//			Debug.Log(animator.GetInteger("State"));
+//		}
 	}
 
-	IEnumerator Food()
-	{
-		while (true)
-		{
-			yield return new WaitForSeconds(3);
-			currentEat = EatGenerator.GetRandomEat();
-			var food = currentEat.IsPoison ? GetNotEdibleFood() : GetEdibleFood();
-			Instantiate(food, currentEat.Position, Quaternion.identity);
-			Debug.Log("Упало яйцо");
-		}
-		
-	}
-
-	private GameObject GetNotEdibleFood()
-	{
-		var random = new System.Random();
-		var foods = new[] {EatKaktus, EatBall, EatBoot, EatPokemon};
-		return foods[random.Next(0, 4)];
-	}
-
-	private GameObject GetEdibleFood()
-	{
-		var random = new System.Random();
-		var foods = new[] {EatCarrot, EatCabbage, EatFlower, EatOats, EatPumpkin, EatCannabis};
-		return foods[random.Next(0, 6)];
-	}
-
-	
 	private void ChangePosition()
 	{
+		var scaleX = transform.localScale.x;
+		var scaleZ = transform.localScale.z;
+		var scaleY = transform.localScale.y;
+		
 		var AKey = Input.GetKeyDown(KeyCode.A);
 		var LeftKey = Input.GetKeyDown(KeyCode.LeftArrow);
 		var DKey = Input.GetKeyDown(KeyCode.D);
@@ -81,54 +56,59 @@ public class Cow : MonoBehaviour
 			Horisontal = Horisontal.Right;
 		}
 
-		if ((WKey || UpKey) && Height == Height.Mid)
+		if ((WKey || UpKey) && StateEnum == StateEnum.Mid)
 		{
-			Height = Height.Up;
+			StateEnum = StateEnum.Up;
 		}
 
-		if ((WKey || UpKey) && Height == Height.Down)
+		if ((WKey || UpKey) && StateEnum == StateEnum.Down)
 		{
-			Height = Height.Mid;
+			StateEnum = StateEnum.Mid;
 		}
 
-		if ((SKey || DownKey)&& Height == Height.Mid)
+		if ((SKey || DownKey)&& StateEnum == StateEnum.Mid)
 		{
-			Height = Height.Down;
+			StateEnum = StateEnum.Down;
 		}
 
-		if ((SKey || DownKey) && Height == Height.Up)
+		if ((SKey || DownKey) && StateEnum == StateEnum.Up)
 		{
-			Height = Height.Mid;
+			StateEnum = StateEnum.Mid;
 		}
 
 		if (Horisontal == Horisontal.Left)
 		{
-			currentPosition = new Vector3(-2, currentPosition.y);
-			transform.localPosition = currentPosition;
+			CurrentPosition = new Vector3(-2, CurrentPosition.y);
+			transform.localPosition = CurrentPosition;
+			transform.localScale = new Vector3(-Mathf.Abs(scaleX), scaleY, scaleZ);
 		}
 
 		if (Horisontal == Horisontal.Right)
 		{
-			currentPosition = new Vector3(2, currentPosition.y);
-			transform.localPosition = currentPosition;
+			CurrentPosition = new Vector3(2, CurrentPosition.y);
+			transform.localPosition = CurrentPosition;
+			transform.localScale = new Vector3(Mathf.Abs(scaleX), scaleY, scaleZ);
 		}
 
-		if (Height == Height.Up)
+		if (StateEnum == StateEnum.Up)
 		{
-			currentPosition = new Vector3(currentPosition.x, 4);
-			transform.localPosition = currentPosition;
+			CurrentPosition = new Vector3(CurrentPosition.x, 4);
+			transform.localPosition = CurrentPosition;
+			animator.SetInteger("State", 1);
 		}
 
-		if (Height == Height.Mid)
+		if (StateEnum == StateEnum.Mid)
 		{
-			currentPosition = new Vector3(currentPosition.x, 1);
-			transform.localPosition = currentPosition;
+			CurrentPosition = new Vector3(CurrentPosition.x, 1);
+			transform.localPosition = CurrentPosition;
+			animator.SetInteger("State", 2);
 		}
 
-		if (Height == Height.Down)
+		if (StateEnum == StateEnum.Down)
 		{
-			currentPosition = new Vector3(currentPosition.x, -2);
-			transform.localPosition = currentPosition;
+			CurrentPosition = new Vector3(CurrentPosition.x, -2);
+			transform.localPosition = CurrentPosition;
+			animator.SetInteger("State", 3);
 		}
 	}
 }

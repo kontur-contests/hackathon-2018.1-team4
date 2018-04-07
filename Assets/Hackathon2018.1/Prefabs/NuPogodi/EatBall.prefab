@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 247247261133779666}
   m_Layer: 0
   m_Name: EatBall
-  m_TagString: Untagged
+  m_TagString: BadFoodPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124829992483502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06026967, y: 0.84645206, z: 13.385938}
+  m_LocalPosition: {x: 16.09, y: -0.44, z: 13.385938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4914189707220634}
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1879153991201508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4103027697080018}
   m_RootOrder: 0

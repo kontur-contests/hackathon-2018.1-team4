@@ -6,10 +6,12 @@
         Right
     }
 
-    public enum Height
+    public enum StateEnum
     {
-        Up,
-        Mid,
-        Down
+        Up = 1,
+        Mid = 2,
+        Down = 3,
+        Happy = 4,
+        Death = 5
     }
 }

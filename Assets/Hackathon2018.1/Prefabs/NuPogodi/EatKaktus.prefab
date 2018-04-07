@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 247795784682616204}
   m_Layer: 0
   m_Name: EatKaktus
-  m_TagString: Untagged
+  m_TagString: BadFoodPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1544218906935718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2753, y: 0.2051, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4126159674357008}
   m_RootOrder: 0
@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230662172549754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: -47.478264, z: 13.450492}
+  m_LocalPosition: {x: 14.7, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4116887342896800}
@@ -106,7 +106,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.09907322
 --- !u!212 &212419275366329382
 SpriteRenderer:
   m_ObjectHideFlags: 1

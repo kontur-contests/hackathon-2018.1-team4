@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 247791103343565214}
   m_Layer: 0
   m_Name: EatCannabis
-  m_TagString: Untagged
+  m_TagString: GoodFoodPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ Transform:
   m_GameObject: {fileID: 1091733207706718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4700979265341786}
   m_RootOrder: 0
@@ -65,8 +65,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856580068808978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35341963, y: 0.5713066, z: 13.425781}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 14.52, y: -1.46, z: 13.425781}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4663390723204008}
   m_Father: {fileID: 0}
