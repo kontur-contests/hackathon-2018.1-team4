@@ -7,7 +7,7 @@ public class MinigameTimer : MonoBehaviour {
     public float timeToWin = -1f;
     public float timeToLose = -1f;
 
-    public float startTimeStamp;
+    private float startTimeStamp;
 
 
 	void Start () {
