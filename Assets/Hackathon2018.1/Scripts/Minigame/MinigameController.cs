@@ -8,6 +8,7 @@ public class MinigameController : MonoBehaviour {
     public static MinigameController instance;
 
     public MinigameUi minigameUi;
+    public MinigameMusic minigameMusic;
 
     private bool ended = false; 
 
@@ -25,6 +26,11 @@ public class MinigameController : MonoBehaviour {
             minigameUi = FindObjectOfType<MinigameUi>();
 
         Debug.Assert(minigameUi != null);
+
+        if (minigameMusic == null)
+            minigameMusic = FindObjectOfType<MinigameMusic>();
+
+        Debug.Assert(minigameMusic != null);
     }
 
     private void Start()
@@ -48,6 +54,7 @@ public class MinigameController : MonoBehaviour {
         ended = true;
 
         minigameUi.ShowLose();
+        minigameMusic.PlayLoseMusic();
 
         Invoke("GoToGlobe", endGameTime);
         Debug.Log("Game Over");
@@ -61,6 +68,7 @@ public class MinigameController : MonoBehaviour {
         ended = true;
 
         minigameUi.ShowWin();
+        minigameMusic.PlayWinMusic();
         Invoke("GoToGlobe", endGameTime);
 
         Debug.Log("Game Complete");
