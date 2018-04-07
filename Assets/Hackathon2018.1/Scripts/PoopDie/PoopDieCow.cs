@@ -62,14 +62,16 @@ public class PoopDieCow : MonoBehaviour {
 
         if(fat)
         {
+            animator.SetTrigger("Eat");
             state = PoopDieCowState.Fat;
 
             Sequence fatSequence = DOTween.Sequence();
-            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 4f));
-            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 4f)).OnComplete(()=> MinigameController.instance.GameOver());
+            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 2f));
+            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 2f)).OnComplete(()=> MinigameController.instance.GameOver());
         }
         else
         {
+            animator.SetTrigger("EatSimple");
             poopManager.RemoveBush();
         }
     }
