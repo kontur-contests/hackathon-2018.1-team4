@@ -66,8 +66,8 @@ public class PoopDieCow : MonoBehaviour {
             state = PoopDieCowState.Fat;
 
             Sequence fatSequence = DOTween.Sequence();
-            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 2f));
-            fatSequence.Append(transform.DOScale(transform.localScale * 4f, 2f)).OnComplete(()=> MinigameController.instance.GameOver());
+            fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f));
+            fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f)).OnComplete(()=> MinigameController.instance.GameOver());
         }
         else
         {
