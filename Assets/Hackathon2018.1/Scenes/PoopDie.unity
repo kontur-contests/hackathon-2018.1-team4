@@ -398,11 +398,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114214549294222648, guid: 1b35d331adf10e84a8f74c404c900c8d,
-        type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 219229779}
     - target: {fileID: 114334676394070954, guid: 1b35d331adf10e84a8f74c404c900c8d,
         type: 2}
       propertyPath: poopManager
@@ -426,6 +421,11 @@ Prefab:
     - target: {fileID: 1428431247775550, guid: 1b35d331adf10e84a8f74c404c900c8d, type: 2}
       propertyPath: m_Name
       value: PoopDieCow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114167180587498986, guid: 1b35d331adf10e84a8f74c404c900c8d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b35d331adf10e84a8f74c404c900c8d, type: 2}
@@ -1693,22 +1693,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b35d331adf10e84a8f74c404c900c8d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &974629238 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1428431247775550, guid: 1b35d331adf10e84a8f74c404c900c8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1205042315}
---- !u!114 &974629243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 974629238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d61fbd549f00b34f8bbf046a6ac9344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1028766989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,18 +1927,6 @@ Prefab:
       propertyPath: bushPos
       value: 
       objectReference: {fileID: 227489679}
-    - target: {fileID: 95019005643299600, guid: 1b35d331adf10e84a8f74c404c900c8d,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 6a2951b8a1b83c64d96f55e44a4a4b4a,
-        type: 2}
-    - target: {fileID: 212646854975445636, guid: 1b35d331adf10e84a8f74c404c900c8d,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300002, guid: c7f463cb5239dd644bd30c7d83b62780,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b35d331adf10e84a8f74c404c900c8d, type: 2}
   m_IsPrefabParent: 0
