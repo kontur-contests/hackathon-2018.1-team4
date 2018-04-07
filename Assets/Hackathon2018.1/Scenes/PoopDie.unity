@@ -2077,7 +2077,7 @@ GameObject:
   - component: {fileID: 1911917945}
   - component: {fileID: 1911917944}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MinigameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
