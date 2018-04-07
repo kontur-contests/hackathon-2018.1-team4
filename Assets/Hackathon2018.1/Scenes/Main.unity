@@ -139,6 +139,7 @@ MonoBehaviour:
   miniGames:
   - {fileID: 11400000, guid: 7f0fdbf8764715c42bb44ddfe049c383, type: 2}
   - {fileID: 11400000, guid: 38ac22d2f75092544afd08aab5ed22de, type: 2}
+  - {fileID: 11400000, guid: c71bd267439749141a3a09f636be414b, type: 2}
   activitiesContaier: {fileID: 1074197902}
   maxActivePoints: 2
   maxActiveTime: 10
