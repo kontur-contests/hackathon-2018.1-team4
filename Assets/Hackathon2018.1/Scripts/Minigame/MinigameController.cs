@@ -7,6 +7,9 @@ public class MinigameController : MonoBehaviour {
 
     public static MinigameController instance;
 
+    public event System.Action OnGameOver;
+    public event System.Action OnWin;
+
     public MinigameUi minigameUi;
     public MinigameMusic minigameMusic;
 
@@ -56,6 +59,9 @@ public class MinigameController : MonoBehaviour {
         minigameUi.ShowLose();
         minigameMusic.PlayLoseMusic();
 
+        if (OnGameOver != null)
+            OnGameOver();
+
         Invoke("GoToGlobe", endGameTime);
         Debug.Log("Game Over");
     }
@@ -70,6 +76,9 @@ public class MinigameController : MonoBehaviour {
         minigameUi.ShowWin();
         minigameMusic.PlayWinMusic();
         Invoke("GoToGlobe", endGameTime);
+
+        if (OnWin != null)
+            OnWin();
 
         Debug.Log("Game Complete");
     }
