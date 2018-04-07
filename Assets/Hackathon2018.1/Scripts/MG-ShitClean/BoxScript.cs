@@ -12,11 +12,11 @@ public class BoxScript : MonoBehaviour {
     private Text ShitCount;
 
     private float time = 30;
-    private int CountToWin = 5;
+    private int CountToWin = 10;
     private int Count = 100;
 
-    private int PoopsCountMin = 30;
-    private int PoopsCountMax = 50;
+    private int PoopsCountMin = 50;
+    private int PoopsCountMax = 100;
     
     public GameObject[] Shits;
 
@@ -64,7 +64,7 @@ public class BoxScript : MonoBehaviour {
 
         time -= Time.deltaTime;
 
-        TimeText.text = time.ToString();
+        TimeText.text = time.ToString().Split('.').FirstOrDefault();
         ShitCount.text = (Count - CountToWin).ToString();
     }
 
