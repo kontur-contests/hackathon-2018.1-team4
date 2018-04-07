@@ -9,7 +9,7 @@ public class ShovelScript : MonoBehaviour {
     Rigidbody2D rigidbody;
     bool rotation = false;
 
-    float moveSpeed = 0.1f;
+    float moveSpeed = 0.2f;
 
     // Use this for initialization
     void Start () {
