@@ -7,12 +7,17 @@ public class ShovelScript : MonoBehaviour {
     GameObject shovel;
     HingeJoint2D joint;
     Rigidbody2D rigidbody;
+    private GameObject LeftUpPoint;
+    private GameObject RightDownPoint;
     bool rotation = false;
 
     float moveSpeed = 0.2f;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        LeftUpPoint = GameObject.Find("LeftUpPoint");
+        RightDownPoint = GameObject.Find("RightDownPoint");
         shovel = GameObject.Find("Shovel");
         joint = shovel.GetComponent<HingeJoint2D>();
         rigidbody = shovel.GetComponent<Rigidbody2D>();
@@ -35,18 +40,19 @@ public class ShovelScript : MonoBehaviour {
         var y = shovel.transform.position.y;
         var z = shovel.transform.position.z;
 
-        if (Input.GetKey(KeyCode.W)){
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
             y += moveSpeed;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (x - 0.3 >= LeftUpPoint.transform.position.x && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
         {
             x -= moveSpeed;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (y - 0.3 >= 0 && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)))
         {
             y -= moveSpeed;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (x + 0.3 <= RightDownPoint.transform.position.x && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
         {
             x += moveSpeed;
         }
