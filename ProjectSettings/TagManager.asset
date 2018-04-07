@@ -39,8 +39,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG Mesh
+    uniqueID: 1003895125
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cow
+    uniqueID: 2804779315
     locked: 0
   - name: Icons
     uniqueID: 2226446011

@@ -5,6 +5,10 @@ using DG.Tweening;
 
 public class PoopDieCow : MonoBehaviour {
 
+    public Animator animator;
+
+    public RuntimeAnimatorController[] animators;
+
     public PoopDieBushManager poopManager;
 
     public float moveMinSpeed = 2f;
@@ -24,6 +28,10 @@ public class PoopDieCow : MonoBehaviour {
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+
+        animator.runtimeAnimatorController = animators[Random.Range(0, animators.Length)];
+
         poopManager.AddBush();
 
         moveSpeed = Random.Range(moveMinSpeed, moveMaxSpeed);
@@ -39,16 +47,14 @@ public class PoopDieCow : MonoBehaviour {
         else
             EatBush();
 
-        transform.rotation = Quaternion.LookRotation(-Camera.main.transform.forward);
-        bushPos.rotation = Quaternion.LookRotation(-Camera.main.transform.forward);
-        //transform.LookAt(Camera.main.transform.position, Vector3.up);
-        //bushPos.LookAt(Camera.main.transform.position, Vector3.up);
     }
 
     public void EatBush()
     {
         if (eatBush)
             return;
+
+        animator.SetTrigger("Eat");
 
         eatBush = true;
 
