@@ -27,7 +27,15 @@ public class ActivityController : MonoBehaviour {
     void OnMouseDown()
     {
         if (minigameData != null && active)
-            SceneManager.LoadScene(minigameData.sceneName);
+        {
+            UiFader.instance.Fade(true);
+            Invoke("LoadScene", 1f);
+        }
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(minigameData.sceneName);
     }
 
     public void ActivateActivity(MinigameData minigameData)

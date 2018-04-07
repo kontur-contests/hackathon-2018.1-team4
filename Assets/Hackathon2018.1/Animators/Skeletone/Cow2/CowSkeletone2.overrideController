@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CowSkeletone2
+  m_Controller: {fileID: 9100000, guid: d7f2fae9338ff7945a306357e04bffd0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3557f7c5ca4e768439663a77e37f1c49, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 035820419b084ed40a6deea7dade0bca, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4e82e526811484e45ae2a32fa3717ec9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f08ab57b7a9e86346bbea16dc3e427cb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d6a6dfacda2fb0e43849adfc25110c77, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4f1b2966de869df45afcbde6e13d24db, type: 2}
