@@ -12,7 +12,7 @@ public class MinigameMusic : MonoBehaviour {
 
     private AudioSource audioSource;
 
-    public void Start()
+    public void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }

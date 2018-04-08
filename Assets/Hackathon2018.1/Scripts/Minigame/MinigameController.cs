@@ -83,6 +83,11 @@ public class MinigameController : MonoBehaviour {
             OnWin();
 
         Debug.Log("Game Complete");
+
+        if(ScoreManager.instance != null)
+        {
+            ScoreManager.instance.score += 20;
+        }
     }
 
     public void GoToGlobe()
