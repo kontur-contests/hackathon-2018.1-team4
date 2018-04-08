@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: SpoopyGame
   m_EditorClassIdentifier: 
   sceneName: SkeletonInTheCloset
-  iconAnimator: {fileID: 0}
+  iconAnimator: {fileID: 9100000, guid: 2ae332f8b386b434a84aa7ee32a9676d, type: 2}

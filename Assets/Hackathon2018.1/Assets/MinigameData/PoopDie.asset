@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: PoopDie
   m_EditorClassIdentifier: 
   sceneName: PoopDie
-  iconAnimator: {fileID: 0}
+  iconAnimator: {fileID: 9100000, guid: 3f32a61a1847cac47b7fd17b31a96688, type: 2}

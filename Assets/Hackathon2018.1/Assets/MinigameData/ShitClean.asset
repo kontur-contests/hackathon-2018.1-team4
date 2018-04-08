@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: ShitClean
   m_EditorClassIdentifier: 
   sceneName: MG-ShitClean
-  iconAnimator: {fileID: 0}
+  iconAnimator: {fileID: 9100000, guid: f3c56be27843f5141afbee01858c9a7b, type: 2}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: IndusGame
   m_EditorClassIdentifier: 
   sceneName: IndusGame
-  iconAnimator: {fileID: 0}
+  iconAnimator: {fileID: 9100000, guid: 019031367e1437f49a6eca8518607d41, type: 2}

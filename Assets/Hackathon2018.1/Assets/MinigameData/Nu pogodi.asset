@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: Nu pogodi
   m_EditorClassIdentifier: 
   sceneName: Nu pogodi
-  iconAnimator: {fileID: 0}
+  iconAnimator: {fileID: 9100000, guid: 16bbd76b7cb295d4cb054d1e06ccd372, type: 2}

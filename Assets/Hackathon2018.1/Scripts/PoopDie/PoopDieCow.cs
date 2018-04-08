@@ -78,6 +78,7 @@ public class PoopDieCow : MonoBehaviour {
             fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f)).OnComplete(()=>
             {
                 MinigameController.instance.GameOver();
+                Instantiate(explosionPrefab).transform.position = transform.position + new Vector3(0f, 2f, 0f);
                 Destroy(gameObject);
             });
         }
@@ -88,11 +89,6 @@ public class PoopDieCow : MonoBehaviour {
         }
     }
 
-    private void OnDestroy()
-    {
-        Instantiate(explosionPrefab).transform.position = transform.position + new Vector3(0f, 2f, 0f);
-    }
-
     public void OnMouseDown()
     {
         RifleController.instance.Shot();
@@ -101,6 +97,7 @@ public class PoopDieCow : MonoBehaviour {
         {
             //TODO:Show Animation
             poopManager.RemoveBush();
+            Instantiate(explosionPrefab).transform.position = transform.position + new Vector3(0f, 2f, 0f);
             Destroy(gameObject);
         }
         else

@@ -5,6 +5,6 @@ using UnityEngine;
 public class MinigameData : ScriptableObject {
 
     public string sceneName;
-    public Animator iconAnimator;
+    public RuntimeAnimatorController iconAnimator;
 
 }

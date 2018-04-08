@@ -7,6 +7,7 @@ public class ActivityController : MonoBehaviour {
     public Transform activityWarp;
     public float warpRotationSpeed;
     public Transform activityIcon;
+    public Animator animator;
 
     private bool active = false;
 
@@ -46,6 +47,7 @@ public class ActivityController : MonoBehaviour {
         activityWarp.gameObject.SetActive(true);
         activityIcon.GetComponent<SpriteRenderer>().DOFade(1f, 0.5f);
         activityWarp.parent.DOScale(Vector3.one, 0.3f);
+        animator.runtimeAnimatorController = minigameData.iconAnimator;
     }
 
     public void DisableActivity()
