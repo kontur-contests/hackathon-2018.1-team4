@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using Hackathon2018._1.NuPogodiScripts;
 using UnityEngine;
 
@@ -11,26 +12,62 @@ public class Cow : MonoBehaviour
 	public Vector3 CurrentPosition = new Vector3(2, 1);
 
 	private Animator animator;
-	
-	//todo temp
-	private int temp = 0;
+	private float happyTime = 0;
+	private bool isDead = false;
 	
 	void Start ()
 	{
 		animator = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
 	void Update ()
 	{
 		ChangePosition();
-//		if (Input.GetKeyDown(KeyCode.Space))
-//		{
-//			animator.SetInteger("State", 1);
-//			Debug.Log(animator.GetInteger("State"));
-//		}
+		if (happyTime > 0)
+			happyTime -= Time.deltaTime;
 	}
 
+	public void Event(StateEnum state)
+	{
+		switch (state)
+		{
+			case StateEnum.Up:
+				if (isDead || happyTime > 0)
+					break;
+				animator.SetInteger("State", 1);
+				break;
+			case StateEnum.Mid:
+				if (isDead || happyTime > 0)
+					break;
+				animator.SetInteger("State", 2);
+				break;
+			case StateEnum.Down:
+				if (isDead || happyTime > 0)
+					break;
+				animator.SetInteger("State", 3);
+				break;
+			case StateEnum.Happy:
+				if (isDead || happyTime > 0)
+					break;
+				animator.SetInteger("State", 4);
+				happyTime = 1;
+				break;
+			case StateEnum.Death:
+				if (isDead)
+					break;
+				animator.SetInteger("State", 5);
+				foreach (var food in GameObject.FindGameObjectsWithTag("BadFoodPiece").Union(GameObject.FindGameObjectsWithTag("GoodFoodPiece")))
+				{
+					Destroy(food.gameObject);
+				}
+				isDead = true;
+				MinigameController.instance.GameOver();
+				break;
+			default:
+				throw new ArgumentOutOfRangeException("state", state, null);
+		}
+	}
+	
 	private void ChangePosition()
 	{
 		var scaleX = transform.localScale.x;
@@ -94,21 +131,21 @@ public class Cow : MonoBehaviour
 		{
 			CurrentPosition = new Vector3(CurrentPosition.x, 4);
 			transform.localPosition = CurrentPosition;
-			animator.SetInteger("State", 1);
+			Event(StateEnum.Up);
 		}
 
 		if (StateEnum == StateEnum.Mid)
 		{
 			CurrentPosition = new Vector3(CurrentPosition.x, 1);
 			transform.localPosition = CurrentPosition;
-			animator.SetInteger("State", 2);
+			Event(StateEnum.Mid);
 		}
 
 		if (StateEnum == StateEnum.Down)
 		{
 			CurrentPosition = new Vector3(CurrentPosition.x, -2);
 			transform.localPosition = CurrentPosition;
-			animator.SetInteger("State", 3);
+			Event(StateEnum.Down);
 		}
 	}
 }

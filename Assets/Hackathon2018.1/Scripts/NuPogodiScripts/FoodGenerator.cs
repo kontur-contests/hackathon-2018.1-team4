@@ -23,6 +23,10 @@ namespace Hackathon2018._1.NuPogodiScripts
             {
                 var currentFood = GetRandomEat();
                 var food = currentFood.IsPoison ? GetNotEdibleFood() : GetEdibleFood();
+                if (food == null)
+                {
+                    break;
+                }
                 Instantiate(food, currentFood.Position, Quaternion.identity);
                 yield return new WaitForSeconds(1);
             }
