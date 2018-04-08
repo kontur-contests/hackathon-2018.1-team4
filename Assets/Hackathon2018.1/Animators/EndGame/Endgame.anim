@@ -23,13 +23,13 @@ AnimationClip:
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: {x: 0, y: 0, z: -45.34}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -57,13 +57,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 133
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: 133
         inSlope: 0
         outSlope: 0
@@ -85,13 +85,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 115.20007
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: -428
         inSlope: 0
         outSlope: 0
@@ -138,7 +138,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.8833334
+    m_StopTime: 3.4333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -170,13 +170,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 133
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: 133
         inSlope: 0
         outSlope: 0
@@ -198,13 +198,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 115.20007
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: -428
         inSlope: 0
         outSlope: 0
@@ -226,13 +226,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -254,13 +254,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -282,13 +282,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.6833334
+        time: 3.2166667
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.8833334
+        time: 3.4166667
         value: -45.34
         inSlope: 0
         outSlope: 0
@@ -335,7 +335,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 2.8833334
+  - time: 3.4333334
     functionName: ResetGame
     data: 
     objectReferenceParameter: {fileID: 0}
