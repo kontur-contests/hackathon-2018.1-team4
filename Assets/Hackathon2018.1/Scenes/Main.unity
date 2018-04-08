@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c71bd267439749141a3a09f636be414b, type: 2}
   - {fileID: 11400000, guid: d9e1e512359c1914d98be8a4a4de3a51, type: 2}
   - {fileID: 11400000, guid: d8939183d7943874e810a27ee5e93c9d, type: 2}
+  - {fileID: 11400000, guid: 93f4ab0a98af6f84c9bccd430e6cdb97, type: 2}
   activitiesContaier: {fileID: 1074197902}
   maxActivePoints: 2
   maxActiveTime: 10
@@ -887,15 +888,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.658
+      value: 0.5991
       objectReference: {fileID: 0}
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.445
+      value: 0.435
       objectReference: {fileID: 0}
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.756
+      value: 0.736
       objectReference: {fileID: 0}
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1243,7 +1244,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.036
+      value: 1.015
       objectReference: {fileID: 0}
     - target: {fileID: 4571842002889374, guid: f296581614dd9f14ab2ea7aca837ea60, type: 2}
       propertyPath: m_LocalPosition.z

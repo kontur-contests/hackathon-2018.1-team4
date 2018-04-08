@@ -18,6 +18,8 @@ public class MinigameUi : MonoBehaviour {
 
     public void ShowTutorImage()
     {
+        MinigameController.instance.minigameMusic.GetReady();
+
         Sequence sequence = DOTween.Sequence();
         sequence.SetUpdate(true);
         sequence.Append(tutorImage.DOFade(1f, 0.5f).SetUpdate(true));
