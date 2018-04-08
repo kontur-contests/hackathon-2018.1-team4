@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MinigameMusic : MonoBehaviour {
 
+    public AudioClip[] levelMusics;
+
     public AudioClip getReadyMusic;
     public AudioClip winMusic;
     public AudioClip loseMusic;
@@ -13,6 +15,13 @@ public class MinigameMusic : MonoBehaviour {
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlayLevelMusic()
+    {
+        audioSource.clip = levelMusics[Random.Range(0, levelMusics.Length)];
+        audioSource.loop = false;
+        audioSource.Play();
     }
 
     public void GetReady()

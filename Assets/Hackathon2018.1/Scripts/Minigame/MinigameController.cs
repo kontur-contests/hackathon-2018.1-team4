@@ -45,6 +45,8 @@ public class MinigameController : MonoBehaviour {
 
     public void StartGame()
     {
+        minigameMusic.PlayLevelMusic();
+
         gamesStarted = true;
         Time.timeScale = 1f;
     }
