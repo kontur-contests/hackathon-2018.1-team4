@@ -1322,11 +1322,15 @@ Prefab:
     - target: {fileID: 2300002, guid: ab75224b971321b47b30471dcab63d39, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f9c65cc6d4c96c4baf4d3d67a2a05eb, type: 2}
+      objectReference: {fileID: 2100000, guid: 80eefb5f4536eb248b966071426ad45a, type: 2}
     - target: {fileID: 2300000, guid: ab75224b971321b47b30471dcab63d39, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f9c65cc6d4c96c4baf4d3d67a2a05eb, type: 2}
+      objectReference: {fileID: 2100000, guid: 5777baae71e0be94cb75acb208bffc81, type: 2}
+    - target: {fileID: 2300000, guid: ab75224b971321b47b30471dcab63d39, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab75224b971321b47b30471dcab63d39, type: 3}
   m_IsPrefabParent: 0

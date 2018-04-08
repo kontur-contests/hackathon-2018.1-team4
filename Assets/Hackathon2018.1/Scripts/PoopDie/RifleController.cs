@@ -44,7 +44,7 @@ public class RifleController : MonoBehaviour {
 
         //Debug.Log(Input.mousePosition);
         Vector3 pos = Input.mousePosition;
-        pos.z = 20;
+        pos.z = 100f;
         pos = Camera.main.ScreenToWorldPoint(pos);
         Ray ray = new Ray(pos, Vector3.down);
 
