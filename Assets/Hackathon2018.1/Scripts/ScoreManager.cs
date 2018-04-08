@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class ScoreManager : MonoBehaviour
             Application.Quit();
         }
 
-        if (Time.time - startGameTimestamp >= GameTime && endGameObject == null)
+        if (Time.time - startGameTimestamp >= GameTime && endGameObject == null && SceneManager.GetActiveScene().buildIndex == 0)
         {
             //TODO: shpw score
 
