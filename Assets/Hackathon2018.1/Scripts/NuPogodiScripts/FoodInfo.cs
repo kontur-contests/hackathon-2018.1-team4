@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Hackathon2018._1.NuPogodiScripts;
-using UnityEditorInternal;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FoodInfo : MonoBehaviour
 {
