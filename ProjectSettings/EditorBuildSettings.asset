@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hackathon2018.1/Scenes/EggGame.unity
     guid: b17a40f0f483c1840a34d51b8e8ea5ad
+  - enabled: 1
+    path: Assets/Hackathon2018.1/Scenes/IndusGame.unity
+    guid: aa571b919f254ef4996cca4ff5866d3d
+  - enabled: 1
+    path: Assets/Hackathon2018.1/Scenes/Balance Game.unity
+    guid: e1b5b6217474627409dbf3c48061090b

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MinigameMusic : MonoBehaviour {
 
+    public AudioClip getReadyMusic;
     public AudioClip winMusic;
     public AudioClip loseMusic;
 
@@ -12,6 +13,13 @@ public class MinigameMusic : MonoBehaviour {
     public void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    public void GetReady()
+    {
+        audioSource.clip = getReadyMusic;
+        audioSource.loop = false;
+        audioSource.Play();
     }
 
     public void PlayWinMusic()

@@ -119,8 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98757837a9c01e143a41f5d330abd0e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winMusic: {fileID: 8300000, guid: bddc3fe7abe61144fa1cbb4d6e4df823, type: 3}
-  loseMusic: {fileID: 8300000, guid: 16d32da60a19e144abfc38264a6a7237, type: 3}
+  getReadyMusic: {fileID: 8300000, guid: 916e2b5a6898eb04a95c2a8d7dd031ad, type: 3}
+  winMusic: {fileID: 8300000, guid: 7a793f69a592c6c49bf4ba8eafbcd59d, type: 3}
+  loseMusic: {fileID: 8300000, guid: 723b8ddb296e099419b13a367fe47a12, type: 3}
 --- !u!224 &224928263210270936
 RectTransform:
   m_ObjectHideFlags: 1
