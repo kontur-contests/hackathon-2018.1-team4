@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class PoopDieCow : MonoBehaviour {
 
+    public GameObject explosionPrefab;
+
     public Animator animator;
 
     public RuntimeAnimatorController[] animators;
@@ -22,12 +24,15 @@ public class PoopDieCow : MonoBehaviour {
     public enum PoopDieCowState { Normal, Fat }
     PoopDieCowState state = PoopDieCowState.Normal;
 
+    private SpriteRenderer spriteRenderer;
+
     private float moveSpeed;
 
     private bool eatBush = false;
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
         animator.runtimeAnimatorController = animators[Random.Range(0, animators.Length)];
@@ -43,7 +48,11 @@ public class PoopDieCow : MonoBehaviour {
     private void Update()
     {
         if (Vector2.Distance(transform.localPosition, bushPos.localPosition) > 0.1f)
+        {
             transform.localPosition += (bushPos.localPosition - transform.localPosition).normalized * moveSpeed * Time.deltaTime;
+
+            spriteRenderer.flipX = (bushPos.localPosition - transform.localPosition).normalized.x < 0f;
+        }
         else
             EatBush();
     }
@@ -66,13 +75,22 @@ public class PoopDieCow : MonoBehaviour {
 
             Sequence fatSequence = DOTween.Sequence();
             fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f));
-            fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f)).OnComplete(()=> MinigameController.instance.GameOver());
+            fatSequence.Append(transform.DOScale(transform.localScale * 2f, 2f)).OnComplete(()=>
+            {
+                MinigameController.instance.GameOver();
+                Destroy(gameObject);
+            });
         }
         else
         {
             animator.SetTrigger("EatSimple");
             poopManager.RemoveBush();
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(explosionPrefab).transform.position = transform.position + new Vector3(0f, 2f, 0f);
     }
 
     public void OnMouseDown()
