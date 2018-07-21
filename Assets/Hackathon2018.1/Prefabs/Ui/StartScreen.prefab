@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 224762927301957188}
   - component: {fileID: 222874567797050802}
   - component: {fileID: 114949775249902080}
+  - component: {fileID: 114125101370561346}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -142,6 +143,28 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114125101370561346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777135327473106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ae4d79d15a3e740aea351f4e78813d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEn: 0
+  ruFont: {fileID: 12800000, guid: 2edb81929edb8e645a4b612ae14f8a69, type: 3}
+  enFont: {fileID: 12800000, guid: 2edb81929edb8e645a4b612ae14f8a69, type: 3}
+  ruFontSize: 28
+  enFontSize: 27
+  ruText: "\u0412\u044B \u0441\u0442\u0430\u043B\u0438 \u043F\u0440\u0435\u0437\u0438\u0434\u0435\u043D\u0442\u043E\u043C
+    \u043C\u0438\u0440\u0430. \u041F\u0440\u043E\u0431\u043B\u0435\u043C\u0430 \u043E\u0437\u043E\u043D\u043E\u0432\u044B\u0445
+    \u0434\u044B\u0440 \u0438\u0437-\u0437\u0430 \u043A\u043E\u0440\u043E\u0432 \u0430\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u0430
+    \u043A\u0430\u043A \u043D\u0438\u043A\u043E\u0433\u0434\u0430. \u0420\u0430\u0437\u0431\u0438\u0440\u0430\u0439\u0442\u0435\u0441\u044C."
+  enText: You became the president of the world. The problem of ozone holes due to
+    cows is more urgent than ever. Disassemble.
 --- !u!114 &114352183809565714
 MonoBehaviour:
   m_ObjectHideFlags: 1
